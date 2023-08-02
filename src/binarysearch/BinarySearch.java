@@ -64,3 +64,22 @@ public class BinarySearch {
     }
     
 }
+/*
+Explicación del metodo binarysearch
+
+left y right son los índices que delimitan el espacio de búsqueda en la lista. left apunta al inicio de la lista (índice 0), y right apunta al final de la lista (arr.length - 1).
+
+El bucle while se ejecuta mientras el espacio de búsqueda sea válido, es decir, mientras left sea menor o igual a right. Si en algún momento left es mayor que right, significa que el elemento objetivo no está presente en la lista y el bucle se detiene.
+
+En cada iteración del bucle, se calcula el índice medio mid del espacio de búsqueda utilizando la fórmula (left + right) / 2. Se evita el desbordamiento de enteros dividiendo la resta right - left por 2.
+
+Se verifica si el elemento en el índice medio mid es igual al elemento objetivo target. Si son iguales, significa que hemos encontrado el elemento y se devuelve el índice mid.
+
+Si el elemento en mid es menor que el objetivo, sabemos que el elemento objetivo debe estar en la mitad derecha del espacio de búsqueda (ya que la lista está ordenada). Por lo tanto, actualizamos el límite izquierdo left para que apunte al elemento después de mid.
+
+Si el elemento en mid es mayor que el objetivo, sabemos que el elemento objetivo debe estar en la mitad izquierda del espacio de búsqueda. Por lo tanto, actualizamos el límite derecho right para que apunte al elemento antes de mid.
+
+El bucle while continúa dividiendo el espacio de búsqueda a la mitad en cada iteración hasta que se encuentre el elemento objetivo o hasta que left sea mayor que right.
+
+Si el bucle termina y no se ha encontrado el elemento objetivo, el método devuelve -1 para indicar que el elemento no está presente en la lista.
+*/
